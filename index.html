@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Oswald:300,400,500,600,700" rel="stylesheet">
+    <title>Star Wars: The Trivia Game</title>
+  </head>
+  <body>
+    <div id = "header">
+      <div class = "row">
+        <div class = "col-md-12">
+          <img id = "banner" src="https://fontmeme.com/permalink/170722/a0f0196f587d6d873b85442a5dd3a993.png" alt="Star Wars: The Trivia Game" width = "100%">
+        </div>
+      </div>
+    </div>
+    <div class="row" id = "row1">
+      <div class="col-md-1"></div>
+      <div class="col-md-3" id = "c3po-div">
+        <div>
+          <img class = "center-block" id = "c3po" src="assets/images/3po.png" alt="C-3PO" width="100%">
+        </div>
+      </div>
+      <div class="col-md-7" id = "text">
+        <h2>Welcome to Jabba's Palace.</h2>
+        <br>
+        <p>
+          Hello. I am C-3PO, Human-Cyborg Relations. His Excellency, the Great Jabba the Hutt, desires you to answer a few trivia questions concerning the mysteries of the Galaxy.
+        </p>
+        <p>
+           The rules of the game are simple: You have 30 seconds to answer each question. Only upon the successful answer of these questions within the allotted time will His Excellency agree to freeing your friend, Han Solo.
+        </p>
+        <p>
+          You may begin when ready.
+        </p>
+        <button id = "button" type="button" name="begin">BEGIN</button>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class = "row" id = "row2">
+      <div class = "col-md-3 col-sm-6 text-center">
+        <h1 id = "wins" class = "counter">0</h1><h4>CORRECT</h4>
+      </div>
+      <div class = "col-md-3 text-center">
+        <h1 id = "losses" class = "counter">0</h1><h4>INCORRECT</h4>
+      </div>
+      <div class = "col-md-3 col-sm-6 text-center">
+        <h1 id = "guessesLeft" class = "counter">0</h1><h4>UNANSWERED</h4>
+      </div>
+      <div class = "col-md-3 text-center">
+        <h1 id = "guesses" class = "counter">30</h1><h4>SECONDS REMAINING</h4>
+      </div>
+    </div>
+    <div class = "footer">
+      <div class="col-12-md text-center">
+        &copy; 2017 Alan Kemsley
+      </div>
+    </div>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </body>
+</html>
