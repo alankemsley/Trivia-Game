@@ -31,7 +31,7 @@ body h1, h2, h3, h4, h5, h6 {
 
 #c3po-div {
   padding-bottom: 5%;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 p {
@@ -80,11 +80,14 @@ p {
   color: #FFD700;
 }
 
+
 /*Sticky Footer*/
+
 html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   margin: 0 0 60px 0;
   padding: 0;

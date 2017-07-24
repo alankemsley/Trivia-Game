@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Oswald:300,400,500,600,700" rel="stylesheet">
-    <title>Star Wars: The Trivia Game</title>
-  </head>
-  <body>
-    <div id = "header">
-      <div class = "row">
-        <div class = "col-md-12">
-          <img id = "banner" class="center-block" src="https://fontmeme.com/permalink/170722/a0f0196f587d6d873b85442a5dd3a993.png" alt="Star Wars: The Trivia Game" width = "100%">
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Oswald:300,400,500,600,700" rel="stylesheet">
+  <title>Star Wars: The Trivia Game</title>
+</head>
+
+<body>
+  <div id="header">
+    <div class="row">
+      <div class="col-md-12">
+        <img id="banner" class="center-block" src="https://fontmeme.com/permalink/170722/a0f0196f587d6d873b85442a5dd3a993.png" alt="Star Wars: The Trivia Game" width="100%">
       </div>
     </div>
-    <div class="row" id = "row1">
-      <div class="col-md-1"></div>
-      <div class="col-md-3" id = "c3po-div">
-        <div>
-          <img class = "center-block" id = "c3po" src="assets/images/3po.png" alt="C-3PO">
-        </div>
-      </div>
-      <div class="col-md-7" id = "text">
-        <h2>Greetings.</h2>
-        <br>
-        <p>
-          I am C-3PO, human-cyborg relations.
-        </p>
-        <p>
-           My companion, R2-D2, has a wealth of information contained in his databank. Would you like to see if you know as much as he does?
-        </p>
-        <p>
-           I will give you 10 challenge questions, and you have 30 seconds to answer each question. The possibility of successfully guessing all of the answers correctly is approximately 1,048,576 to 1, so please do your best.
-        </p>
-        <p>
-          We may begin when you are ready.
-        </p>
-        <button id = "button" type="button" name="begin">BEGIN</button>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class = "row" id = "row2">
-      <div class = "col-md-3 col-xs-6 text-center">
-        <h1 id = "correct" class = "counter">0</h1><h4>CORRECT</h4>
-      </div>
-      <div class = "col-md-3 col-xs-6 text-center">
-        <h1 id = "incorrect" class = "counter">0</h1><h4>INCORRECT</h4>
-      </div>
-      <div class = "col-md-3 col-xs-6 text-center">
-        <h1 id = "not-answered" class = "counter">0</h1><h4>NOT ANSWERED</h4>
-      </div>
-      <div class = "col-md-3 col-xs-6 text-center">
-        <h1 id = "seconds-left" class = "counter">30</h1><h4>SECONDS LEFT</h4>
+  </div>
+  <div class="row" id="row1">
+    <div class="col-md-1"></div>
+    <div class="col-md-3" id="c3po-div">
+      <div>
+        <img class="center-block" id="c3po" src="assets/images/3po.png" alt="C-3PO">
       </div>
     </div>
-    <div class = "footer">
-      <div class="col-12-md text-center">
-        &copy; 2017 Alan Kemsley
-      </div>
+    <div class="col-md-7" id="text">
+      <h2>Greetings.</h2>
+      <br>
+      <p>
+        I am C-3PO, human-cyborg relations.
+      </p>
+      <p>
+        My companion, R2-D2, has a wealth of information contained in his databank. Would you like to see if you know as much as he does?
+      </p>
+      <p>
+        I will give you 10 challenge questions, and you have 30 seconds to answer each question. The possibility of successfully guessing all of the answers correctly is approximately 1,048,576 to 1, so please do your best.
+      </p>
+      <p>
+        We may begin when you are ready.
+      </p>
+      <button id="button" type="button" name="begin">BEGIN</button>
     </div>
+    <div class="col-md-1"></div>
+  </div>
+  <div class="row" id="row2">
+    <div class="col-md-3 col-xs-6 text-center">
+      <h1 id="correct" class="counter">0</h1>
+      <h4>CORRECT</h4>
+    </div>
+    <div class="col-md-3 col-xs-6 text-center">
+      <h1 id="incorrect" class="counter">0</h1>
+      <h4>INCORRECT</h4>
+    </div>
+    <div class="col-md-3 col-xs-6 text-center">
+      <h1 id="not-answered" class="counter">0</h1>
+      <h4>NOT ANSWERED</h4>
+    </div>
+    <div class="col-md-3 col-xs-6 text-center">
+      <h1 id="seconds-left" class="counter">30</h1>
+      <h4>SECONDS LEFT</h4>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-12-md text-center">
+      &copy; 2017 Alan Kemsley
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/javascript/game.js"></script>
-  </body>
+</body>
+
 </html>
