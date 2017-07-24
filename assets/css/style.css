@@ -2,12 +2,14 @@ body {
   background-color: #aaa;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  line-height: normal;
 }
 
 body h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
   color: #1B2F43;
+  line-height: normal;
 }
 
 #header {
@@ -38,7 +40,7 @@ p {
 
 #row1 {
   background-color: #E8EAEC;
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 50px;
   margin: 0;
   color: #444;
