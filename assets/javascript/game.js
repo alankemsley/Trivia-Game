@@ -10,9 +10,9 @@ $(document).ready(function() {
 
   var q5 = "<h2>5. In what time did Captain Han Solo famously perform the kessel run in the Millennium Falcon?</h2><br><p class=a>A. Less than 3 parsecs</p><p class=b>B. Less than 10 parsecs</p><p class=c>C. Less than 12 parsecs</p><p class=d>D. 14 parsecs</p>";
 
-  var correctAlert = "<h2>You are Correct!</h2><br><p>Wonderful! Your knowledge far exceeds my expectations. For a human.</p>";
+  var correctAlert = "<h2>You are Correct.</h2><br><p>Wonderful! Your knowledge far exceeds my expectations. For a human.</p>";
 
-  var incorrectAlert = "<h2>You are Incorrect!</h2><br><p>Your knowledge is far below my expectations.</p><p>Of course... humans are known to make mistakes... from time to time.</p>";
+  var incorrectAlert = "<h2>You are Incorrect.</h2><br><p>Your knowledge is far below my expectations.</p><p>Of course... humans are known to make mistakes... from time to time.</p>";
 
   var notAnsweredAlert = "<h2>Your Time is Up!</h2><br><p>Your knowledge is far below my expectations.</p><p>Of course... humans are known to make mistakes... from time to time.</p>";
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
   var incorrectCount = 0;
   var notAnsweredCount = 0;
   var i = 0;
-  var timeLeft = 30;
+  var timeLeft = 15;
 
   var nextQuestion = function() {
     if (i >= 5) {
@@ -42,7 +42,7 @@ $(document).ready(function() {
     correctCount++;
     $("#correct").html(correctCount);
     clearInterval(countDown);
-    timeLeft = 30;
+    timeLeft = 15;
     $("#seconds-left").html(timeLeft);
     setTimeout(nextQuestion, 5000);
   }
@@ -52,7 +52,7 @@ $(document).ready(function() {
     incorrectCount++;
     $("#incorrect").html(incorrectCount);
     clearInterval(countDown);
-    timeLeft = 30;
+    timeLeft = 15;
     $("#seconds-left").html(timeLeft);
     setTimeout(nextQuestion, 5000);
   }
@@ -62,7 +62,7 @@ $(document).ready(function() {
     notAnsweredCount++;
     $("#not-answered").html(notAnsweredCount);
     clearInterval(countDown);
-    timeLeft = 30;
+    timeLeft = 15;
     $("#seconds-left").html(timeLeft);
     setTimeout(nextQuestion, 5000);
   }
@@ -75,7 +75,7 @@ $(document).ready(function() {
       incorrectCount = 0;
       notAnsweredCount = 0;
       i = 0;
-      timeLeft = 30;
+      timeLeft = 15;
       nextQuestion();
     });
   }
