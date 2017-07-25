@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var q1 = "<h2>1. How many forms of communication is C3PO fluent in?</h1><br><p class=a>A. 6  million</p><p class=b>B. 9 million</p><p class=b>C. 12 million</p><p class=d>D. 3 thousand</p>";
+  var q1 = "<h2>1. How many forms of communication is C3PO fluent in?</h1><br><p class=a>A. 6  million</p><p class=b>B. 9 million</p><p class=c>C. 12 million</p><p class=d>D. 3 thousand</p>";
 
   var q2 = "<h2>2. The first Death Star was destroyed by __________ fired from Luke Skywalker's X-Wing fighter.</h2><br><p class=a>A. ion torpedoes</p><p class=b>B. proton torpedoes</p><p class=c>C. neuron torpedoes</p><p class=d>D. kyber torpedoes</p>";
 
@@ -24,87 +24,67 @@ $(document).ready(function() {
   var incorrectCount = 0;
   var notAnsweredCount = 0;
   var i = 0;
-  var timeLeft = 5;
+  var timeLeft = 30;
 
-  var nextQuestion = function(){
-    $("#text").html(questions[i]);
-    i ++;
-    countDown = setInterval(timer, 1000);
+  var nextQuestion = function() {
+    if (i >= 5) {
+      showGameOverAlert();
+    } else {
+      $("#text").html(questions[i]);
+      i++;
+      countDown = setInterval(timer, 1000);
+      options();
+    }
   }
 
-  var showCorrectAlert = function (){
+  var showCorrectAlert = function() {
     $("#text").html(correctAlert);
     correctCount++;
     $("#correct").html(correctCount);
     clearInterval(countDown);
-    timeLeft = 5;
+    timeLeft = 30;
     $("#seconds-left").html(timeLeft);
     setTimeout(nextQuestion, 5000);
   }
 
-  var showIncorrectAlert = function (){
+  var showIncorrectAlert = function() {
     $("#text").html(incorrectAlert);
     incorrectCount++;
     $("#incorrect").html(incorrectCount);
     clearInterval(countDown);
-    timeLeft = 5;
+    timeLeft = 30;
     $("#seconds-left").html(timeLeft);
     setTimeout(nextQuestion, 5000);
   }
 
-  var showNotAnsweredAlert = function(){
+  var showNotAnsweredAlert = function() {
     $("#text").html(notAnsweredAlert);
     notAnsweredCount++;
     $("#not-answered").html(notAnsweredCount);
     clearInterval(countDown);
-    timeLeft = 5;
+    timeLeft = 30;
     $("#seconds-left").html(timeLeft);
     setTimeout(nextQuestion, 5000);
   }
 
-  var showGameOverAlert = function(){
+  var showGameOverAlert = function() {
     $("#text").html(gameOverAlert);
+    clearInterval(countDown);
+    $("#restart").click(function() {
+      correctCount = 0;
+      incorrectCount = 0;
+      notAnsweredCount = 0;
+      i = 0;
+      timeLeft = 30;
+      nextQuestion();
+    });
   }
 
-  $("#restart").click(function(){
-    correctCount = 0;
-    incorrectCount = 0;
-    notAnsweredCount = 0;
-    i = 0;
-    timeLeft = 5;
-    nextQuestion();
-  });
-
-
-  $("#begin").click(function(){
+  $("#begin").click(function() {
     nextQuestion();
 
-    $(".a").click(function(){
-      if (i === 1){
-        showCorrectAlert();
-      } else {
-        showIncorrectAlert();
-      }
-    });
-
-    $(".b").click(function(){
-      if (i === 2 || i === 4){
-        showCorrectAlert();
-      } else {
-        showIncorrectAlert();
-      }
-    });
-
-    $(".c").click(function(){
-      if (i === 5){
-        showCorrectAlert();
-      } else {
-        showIncorrectAlert();
-      }
-    });
-
-    $(".d").click(function(){
-      if (i === 3){
+    $(".a").click(function() {
+      if (i === 1) {
         showCorrectAlert();
       } else {
         showIncorrectAlert();
@@ -113,49 +93,48 @@ $(document).ready(function() {
 
   });
 
-  var timer = function(){
+  var timer = function() {
     timeLeft--;
     $("#seconds-left").html(timeLeft);
-    if (timeLeft === 0){
+    if (timeLeft === 0) {
       showNotAnsweredAlert();
     }
   }
 
-  if (i === 2 || i === 4){
-    $(".b").click(function(){
-      showCorrectAlert();
+  var options = function() {
+
+    $(".a").click(function() {
+      if (i === 1) {
+        showCorrectAlert();
+      } else {
+        showIncorrectAlert();
+      }
     });
-  } else {
-    $(".b").click(function(){
-      showIncorrectAlert();
+
+    $(".b").click(function() {
+      if (i === 2 || i === 4) {
+        showCorrectAlert();
+      } else {
+        showIncorrectAlert();
+      }
     });
-  }
 
-  $(".b").click(function(){
-    if (i === 2 || i === 4){
-      showCorrectAlert();
-    } else {
-      showIncorrectAlert();
-    }
-  });
+    $(".c").click(function() {
+      if (i === 5) {
+        showCorrectAlert();
+      } else {
+        showIncorrectAlert();
+      }
+    });
 
-  if (i >= 5){
-    showGameOverAlert();
-  }
+    $(".d").click(function() {
+      if (i === 3) {
+        showCorrectAlert();
+      } else {
+        showIncorrectAlert();
+      }
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  };
 
 });
