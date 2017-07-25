@@ -85,15 +85,6 @@ $(document).ready(function() {
 
   $("#begin").click(function() {
     nextQuestion();
-
-    $(".a").click(function() {
-      if (i === 1) {
-        showCorrectAlert();
-      } else {
-        showIncorrectAlert();
-      }
-    });
-
   });
 
   var timer = function() {
