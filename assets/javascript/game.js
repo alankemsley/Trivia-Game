@@ -16,6 +16,8 @@ $(document).ready(function() {
 
   var notAnsweredAlert = "<h2>Your Time is Up!</h2><br><p>Your knowledge is far below my expectations.</p><p>Of course... humans are known to make mistakes... from time to time.</p>";
 
+  var gameOverAlert = "<h2>Game Over</h2><br><p>I hope you enjoyed the game. Would you like to play again?</p><button id='restart' type='button' name='restart' class = 'button'>RESTART</button>"
+
   var questions = [q1, q2, q3, q4, q5];
 
   var correctCount = 0;
@@ -59,6 +61,20 @@ $(document).ready(function() {
     $("#seconds-left").html(timeLeft);
     setTimeout(nextQuestion, 5000);
   }
+
+  var showGameOverAlert = function(){
+    $("#text").html(gameOverAlert);
+  }
+
+  $("#restart").click(function(){
+    correctCount = 0;
+    incorrectCount = 0;
+    notAnsweredCount = 0;
+    i = 0;
+    timeLeft = 5;
+    nextQuestion();
+  });
+
 
   $("#begin").click(function(){
     nextQuestion();
@@ -105,10 +121,27 @@ $(document).ready(function() {
     }
   }
 
+  if (i === 2 || i === 4){
+    $(".b").click(function(){
+      showCorrectAlert();
+    });
+  } else {
+    $(".b").click(function(){
+      showIncorrectAlert();
+    });
+  }
 
+  $(".b").click(function(){
+    if (i === 2 || i === 4){
+      showCorrectAlert();
+    } else {
+      showIncorrectAlert();
+    }
+  });
 
-
-
+  if (i >= 5){
+    showGameOverAlert();
+  }
 
 
 
