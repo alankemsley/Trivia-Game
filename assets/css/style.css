@@ -59,7 +59,7 @@ p {
   padding-right: 5%;
 }
 
-#button {
+.button {
   background-color: #E8EAEC;
   border: 3px solid #1B2F43;
   margin-top: 20px;
@@ -70,7 +70,7 @@ p {
   font-size: 14px;
 }
 
-#button:hover {
+.button:hover {
   background-color: #1B2F43;
   border-color: #1B2F43;
   color: #FFD700;
@@ -78,6 +78,26 @@ p {
 
 .counter {
   color: #FFD700;
+}
+
+.a:hover {
+  font-weight: bold;
+  color: #1B2F43;
+}
+
+.b:hover {
+  font-weight: bold;
+  color: #1B2F43;
+}
+
+.c:hover {
+  font-weight: bold;
+  color: #1B2F43;
+}
+
+.d:hover {
+  font-weight: bold;
+  color: #1B2F43;
 }
 
 
