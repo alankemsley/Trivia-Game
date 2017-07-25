@@ -77,6 +77,9 @@ $(document).ready(function() {
       i = 0;
       timeLeft = 15;
       nextQuestion();
+      $("#correct").html(correctCount);
+      $("#incorrect").html(incorrectCount);
+      $("#not-answered").html(notAnsweredCount);
     });
   }
 
